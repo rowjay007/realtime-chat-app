@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Link from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const Join = () => {
   const [name, setName] = useState("");
@@ -8,7 +8,7 @@ const Join = () => {
     <div className="joinOuterContainer">
       <div className="joinInnerContainer">
         <h1 className="heading">Join</h1>
-        <div>
+        <div>  
           <input
             placeholder="Name"
             className="jointInput"
