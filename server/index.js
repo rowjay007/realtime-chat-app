@@ -11,10 +11,16 @@ const server = http.createServer(app);
 const io = socketio(server);
 
 io.on("connection", (socket) => {
-  console.log("We have a new connection");
+  console.log("We have a new connection"); 
 
-  socket.on("join", ({ name, room }) => {
+  socket.on("join", ({ name, room }, callback) => {
     console.log(name, room);
+
+    // const error = true;
+
+    // if (error) {
+    //   callback({ error: "error" });
+    // }
   });
 
   socket.on("disconnect", () => {
